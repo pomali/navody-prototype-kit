@@ -41,7 +41,7 @@ window.GOVUK.getCurrentLocation = function () {
       var $showOrHideAllButton
 
       getTextForInsertedElements()
-      addButtonstoSteps()
+      // addButtonstoSteps()                // Disabled for navody.digital
       addShowHideAllButton()
       addShowHideToggle()
       addAriaControlsAttrForShowHideAllButton()
@@ -50,9 +50,8 @@ window.GOVUK.getCurrentLocation = function () {
       showLinkedStep()
       ensureOnlyOneActiveLink()
 
-      // Disabled for navody.digital
-      // bindToggleForSteps()
-      // bindToggleShowHideAllButton()
+      // bindToggleForSteps()               // Disabled for navody.digital
+      // bindToggleShowHideAllButton()      // Disabled for navody.digital
       bindComponentLinkClicks()
 
       function getTextForInsertedElements () {
