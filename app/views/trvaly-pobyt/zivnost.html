@@ -1,0 +1,39 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Živnosť
+  </h1>
+
+  <p>POZOR - kroky s určenou lehotou (a prípadnou sankciou za nesplnenie lehoty) na oznámenie zmeny trvalého pobytu</p>
+
+  <p>
+    Zmenu trvalého pobytu urobíte cez slovensko.sk ktore vas nasmeruje na portal ministerstva vnutra
+  </p>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky <a>(link na ZS Vytvorenie a aktivacia)</a></li>
+      <li>Potvrdenie o povoleni</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Zmena živnosti",
+    href: "https://www.slovensko.sk/sk/detail-sluzby?externalCode=JKM_1097_1",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+
+  <p>
+    Skoncili ste s prihlásením cez slovensko.sk? Vybavte si nový občiansky preukaz.
+  </p>
+
+  {{ govukButton({
+    text: "Ďalší krok",
+    href: serviceUrl + "/ostatne-institucie",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}

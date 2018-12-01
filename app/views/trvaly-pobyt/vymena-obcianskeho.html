@@ -1,0 +1,40 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Výmena občianskeho
+  </h1>
+
+  <p>
+    Poziadajte o zmenu obcianskeho
+  </p>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky <a>(link na ZS Vytvorenie a aktivacia)</a></li>
+      <li>Potvrdenie o povoleni</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Žiadosť o vydanie nového občianskeho",
+    href: "https://portal.minv.sk/wps/wcm/connect/sk/site/main/zivotne-situacie/menu-doklady/sluzba-ziadost-vydanie+obcianskeho+preukazu+s+cipom/",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+
+  <p>
+    Na novy obciansky budete cakat cca 3 tyzdne.
+  </p>
+  <p>
+    Dostali ste novy obciansky? 
+  </p>
+
+  {{ govukButton({
+    text: "Ďalší krok",
+    href: serviceUrl + "/dopravny-inspektorat",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}

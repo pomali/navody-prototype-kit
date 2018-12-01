@@ -1,0 +1,37 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Zmeňte si trvalý pobyt
+  </h1>
+
+  <p>
+    Zmenu trvalého pobytu urobíte cez slovensko.sk ktore vas nasmeruje na portal ministerstva vnutra
+  </p>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky <a>(link na ZS Vytvorenie a aktivacia)</a></li>
+      <li>Potvrdenie o povoleni</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Prihláste sa na trvalý pobyt",
+    href: "https://www.slovensko.sk/sk/detail-sluzby?externalCode=ks_334103",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+
+  <p>
+    Skoncili ste s prihlásením cez slovensko.sk? Vybavte si nový občiansky preukaz.
+  </p>
+
+  {{ govukButton({
+    text: "Ďalší krok",
+    href: serviceUrl + "/vymena-obcianskeho",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}

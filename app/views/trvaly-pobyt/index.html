@@ -1,0 +1,26 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-l">
+    {{serviceName}}
+  </h1>
+
+  <p>
+    Zistite, čo treba vybaviť na zmenu trvalého pobytu
+  </p>
+
+  <p>
+    Zmena trvalého bydliska trvalého pobytu
+  </p>
+
+
+  <p>
+    Ak vám nebude stačiť náš postup vyskúšajte <a href="https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_trvaly-pobyt-stahovanie">Slovensko.sk</a>
+  </p>
+
+  {{ govukButton({
+    text: "Začať",
+    href: serviceUrl + "/zmena-trvaleho-pobytu",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}
