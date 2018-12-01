@@ -150,6 +150,7 @@ function buildRequestData (request, errors) {
     'activeHref': urlTo(request.path),
     'serviceName': 'Založenie živnosti: krok po kroku',
     'serviceUrl': '/zalozenie-zivnosti',
+    'sessionToken': request.query.token,
     'navigationSteps': [
       {
         number: '0',
