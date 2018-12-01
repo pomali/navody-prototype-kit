@@ -1,0 +1,35 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Žiadosť o vydanie nového občianskeho preukazu
+  </h1>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky preukaz</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Žiadosť o vydanie nového občianskeho",
+    href: "https://portal.minv.sk/wps/wcm/connect/sk/site/main/zivotne-situacie/menu-doklady/sluzba-ziadost-vydanie+obcianskeho+preukazu+s+cipom/",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+
+  <p>
+    Na nový občiansky budete čakať cca. 3 týždne.
+  </p>
+  <p>
+    Dostali ste nový občiansky preukaz? Pozrite si ďalšie zmeny ktoré na Vás čakajú.
+  </p>
+
+  {{ govukButton({
+    text: "Ďalší krok",
+    href: serviceUrl + "/dolezite-zmeny",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}

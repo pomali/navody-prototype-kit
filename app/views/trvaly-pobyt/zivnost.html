@@ -1,0 +1,27 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Živnosť
+  </h1>
+
+  <p>Podnikateľ je povinný oznámiť príslušnému živnostenskému úradu všetky zmeny a doplnky týkajúce sa údajov a dokladov ustanovených na ohlásení živnosti a predložiť o nich doklady do 15 dní od vzniku týchto zmien, ak zákon č. 455/1991 Zb. o živnostenskom podnikaní (živnostenský zákon) v znení neskorších predpisov neustanovuje inak.
+      Správny poplatok sa nevyberie, ak sa úkon vykoná na základe podania predloženého elektronickými prostriedkami a podpísaného elektronickým podpisom podľa  zákona  č. 215/2002 Z. z. o elektronickom podpise a o zmene a doplnení niektorých zákonov v znení neskorších predpisov.</p>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky preukaz s novým trvalým pobytom</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Zmena živnosti",
+    href: "https://www.slovensko.sk/sk/detail-sluzby?externalCode=JKM_1097_1",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+  <p>Pre ďalší postup vyberte udalosť vľavo</p>
+
+{% endblock %}

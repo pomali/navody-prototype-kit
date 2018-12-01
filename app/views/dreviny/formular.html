@@ -1,0 +1,260 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %} {% block mainContent
+%}
+<h1 class="govuk-heading-xl">Žiadosť o vydanie súhlasu na výrub dreviny</h1>
+
+<p>
+  o vydanie súhlasu na výrub dreviny podľa zákona č. 543/2002 Z. z. o ochrane
+  prírody a krajiny v znení neskorších predpisov a vyhlášky MŽP SR č. 24/2003 Z.
+  z., ktorou sa vykonáva zákon č. 543/2002 Z. z. o ochrane prírody a krajiny
+  v znení neskorších predpisov
+</p>
+
+<h3 class="govuk-heading-l">Údaje o žiadateľovi</h3>
+{{
+  govukInput({
+    label: {
+      text: "Meno a priezvisko /názov/, obchodné meno"
+    },
+    id: "full-name",
+    name: "full-name"
+  })
+}}
+
+{% call govukFieldset({ legend: { text: "Trvalý pobyt /sídlo/ miesto
+podnikania", classes: "govuk-fieldset__legend--m", isPageHeading: true } }) %}
+{{ govukInput({ label: { html: 'Adresa trvalého pobytu' }, id: "address-line-1",
+name: "address-line-1" }) }}
+
+{{
+  govukInput({
+    label: {
+      text: "Mesto"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-town",
+    name: "address-town"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "PSČ"
+    },
+    classes: "govuk-input--width-10",
+    id: "address-postcode",
+    name: "address-postcode"
+  })
+}}
+
+{% endcall %}
+
+<h3 class="govuk-heading-l">Údaje o pozemku, na ktorom drevina rastie</h3>
+
+{{
+  govukInput({
+    label: {
+      text: "Katastrálne územie"
+    },
+    id: "address-postcode",
+    name: "address-postcode"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Parcelné číslo a príslušnosť k zastavanému územia obce"
+    },
+    id: "address-postcode",
+    name: "address-postcode"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Druh pozemku"
+    },
+    id: "address-postcode",
+    name: "address-postcode"
+  })
+}}
+
+
+{{ govukFileUpload({
+  id: "file-upload-1",
+  name: "file-upload-1",
+  label: {
+    text: "Príloha: kópia katastrálnej mapy alebo iný doklad umožňujúci identifikáciu dreviny v teréne"
+  }
+}) }}
+
+
+<h3 class="govuk-heading-l">
+  Súhlas vlastníka, správcu, prípadne nájomcu
+</h3>
+<p>(ak mu takéto oprávnenie vyplýva
+    z nájomnej zmluvy) pozemku, na ktorom drevina rastie, ak žiadateľ nie je jeho
+    vlastníkom (správcom, nájomcom)</p>
+
+{{ govukFileUpload({
+  id: "file-upload-1",
+  name: "file-upload-1",
+  label: {
+    text: "Stanovisko vlastníka /správcu /nájomcu"
+  }
+}) }}
+
+
+<p>
+1/ Doklady podľa písmena B/ a C/ sa nevyžadujú, ak ide o žiadosť
+o vydanie súhlasu na výrub dreviny z dôvodu umiestnenia líniovej stavby, na
+ktorej účely možno pozemky vyvlastniť. K žiadosti sa pripojí výkres
+z projektovej dokumentácie stavby, ktorý obsahuje presný opis trasy líniovej
+stavby v mierke najmenej 1 : 50 000 alebo 1 : 10 000 s vyznačením lokality, kde
+drevina rastie.
+</p>
+
+<h3 class="govuk-heading-l">Špecifikácia dreviny, ktorá sa má vyrúbať Stromy</h3>
+
+{{
+  govukInput({
+    label: {
+      text: "Druh dreviny"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Počet"
+    },
+    classes: "govuk-input--width-4",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+  items: [
+    {
+      value: "carcasses",
+      text: "Obvod kmeňa vo výške 130 cm nad zemou"
+    }
+  ]
+}) }}
+
+
+{{
+  govukInput({
+    label: {
+      text: "Zdravotný stav"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+<a href="#">Pridať ďalší</a>
+    
+<h3 class="govuk-heading-m">Krovité porasty</h3>
+
+{{
+  govukInput({
+    label: {
+      text: "Druh dreviny"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+
+
+{{
+  govukInput({
+    label: {
+      text: "Plošná výmera krovitých porastov"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+
+
+{{
+  govukInput({
+    label: {
+      text: "Zdravotný stav"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  })
+}}
+<a href="#">Pridať ďalší</a>
+
+
+
+
+<h3 class="govuk-heading-m">Odôvodnenie žiadosti</h3>
+
+{{
+  govukTextarea({
+    name: "more-detail",
+    id: "more-detail"
+  })
+}}
+
+<h3 class="govuk-heading-l">Správny poplatok uhradený</h3>
+
+
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  items: [
+  {
+    value: "england",
+    text: "prevodom z účtu v banke"
+  },
+  {
+    value: "scotland",
+    text: "poštovým poukazom na účet obce"
+  },
+  {
+    value: "wales",
+    text: "v hotovosti do pokladnice obce"
+  },
+  {
+    value: "abroad",
+    text: "na žiadateľa sa vzťahuje oslobodenie podľa § 4 alebo položky 160 zákona NR SR č. 145/1995 Z. z."
+  }
+  ]
+  })
+}}
+
+{{ govukFileUpload({
+  id: "file-upload-1",
+  name: "file-upload-1",
+  label: {
+    text: "Príloha: doklad o zaplatení"
+  }
+}) }}
+
+
+{{
+  govukButton({
+    text: "Skontrolovať",
+    href: serviceUrl + "/kontrola",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

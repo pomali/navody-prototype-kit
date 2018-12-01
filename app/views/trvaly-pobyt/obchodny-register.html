@@ -1,0 +1,26 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+      Obchodný register
+  </h1>
+
+  <p>Pozor! zmenu registrovaných údajov (adresa konateľa alebo spoločníka) sa musí podať do 30 dní. Zmenu podáva osoba oprávnená konať (konateľ, štatutár). Sankcia za nepodanie v lehote môže byť až do 3310 € a je mierená voči fyzickej osobe - štatutárovi zodpovednému za podanie záppisu zmien.</p>
+
+  <p>
+    Potrebujete
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Elektronický občiansky preukaz s novým trvalým pobytom</li>
+    </ul>
+  </p>
+  
+  {{ govukButton({
+    text: "Zmena údajov v obchodnom registri",
+    href: "https://www.slovensko.sk/sk/detail-sluzby?externalCode=OR_48033",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+
+  <p>Pre ďalší postup vyberte udalosť vľavo</p>
+{% endblock %}

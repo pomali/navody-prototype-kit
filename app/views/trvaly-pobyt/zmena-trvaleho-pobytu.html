@@ -1,0 +1,42 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Hlásenie zmeny trvalého pobytu
+  </h1>
+
+  <p>
+    Potrebujete
+    {{ govukDetails({
+          summaryText: "Elektronický občiansky",
+          text: "S aktivovaným eID"
+        }) }}
+        
+        {{ govukDetails({
+          summaryText: "Súhlas vlastníka nehnuteľnosti",
+          html: "Toto potvrdenie sa nevyžaduje, ak
+          <ol>
+          <li>ide o prihlásenie vlastníka alebo spoluvlastníka,</li>
+          <li>ide o prihlásenie občana, ktorý má zriadené vecné bremeno doživotného užívania nehnuteľnosti,</li>
+          <li>ide o prihlásenie manžela alebo nezaopatreného dieťaťa vlastníka alebo</li>
+          <li>vlastník alebo všetci spoluvlastníci budovy alebo jej časti potvrdia svojím podpisom na prihlasovacom lístku na trvalý pobyt súhlas s prihlásením občana na trvalý pobyt pred zamestnancom ohlasovne.</li>
+        </ol>"
+        }) }}
+  </p>
+
+  
+  {{ govukButton({
+    text: "Prejsť na hlásenie pobytu",
+    href: "https://www.slovensko.sk/sk/detail-sluzby?externalCode=ks_334103",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+    attributes: {target: '_blank'}
+  }) }}
+
+  <p>Po úspešnom hlásení zmeny pobytu môžete prejsť na - žiadosť o vydanie nového občianskeho preukazu</p>
+
+  {{ govukButton({
+    text: "Ďalší krok",
+    href: serviceUrl + "/vymena-obcianskeho",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %} {% block mainContent
+%}
+<h1 class="govuk-heading-l">{{ serviceName }}</h1>
+
+<p>Zistite, čo treba vybaviť na zmenu trvalého pobytu</p>
+
+<p>Táto služba Vám pomôže s:</p>
+<ul  class="govuk-list govuk-list--bullet">
+  <li>
+    hlásením zmeny trvalého pobytu
+  </li>
+  <li>podaním žiadosti o vydanie nového občianskeho preukazu</li>
+  <li>úkonmi po vydaní nového občianskeho preukazu</li>
+</ul>
+<p>Prejdite na prvý krok - ohláste zmenu Vášho trvalého pobytu.</p>
+
+{{
+  govukButton({
+    text: "Začať",
+    href: serviceUrl + "/zmena-trvaleho-pobytu",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Ostatné zmeny
+  </h1>
+  
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "TODO list",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: ""
+  },
+  items: [
+    {
+      value: "banka",
+      text: "Banka"
+    },
+    {
+      value: "zdravotna-poistovna",
+      text: "Zdravotná poisťovňa"
+    },
+    {
+      value: "zamestnavatel",
+      text: "Zamenstnávateľ"
+    },
+    {
+      value: "socpoist",
+      text: "Sociálna poisťovňa"
+    },
+    {
+      value: "du",
+      text: "Daňový úrad"
+    },
+    {
+      value: "ddp",
+      text: "Doplnková dôchodková poisťovňa"
+    },
+    {
+      value: "stavpo",
+      text: "Stavebná sporiťeľňa"
+    },
+    {
+      value: "nebank",
+      text: "Nebankové alebo splátkové spoločnosti"
+    },
+    {
+      value: "sud",
+      text: "Súdy"
+    },
+    {
+      value: "exec",
+      text: "Exekútor"
+    },
+    {
+      value: "post",
+      text: "Pošta (doposielanie)"
+    }
+  ]
+}) }}
+
+  
+{% endblock %}
