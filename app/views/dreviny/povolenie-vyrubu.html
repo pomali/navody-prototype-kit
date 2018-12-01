@@ -1,0 +1,48 @@
+{% extends "trvaly-pobyt/layout_step_by_step_nav.html" %}
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">
+    Kedy nepotrebujete povolenie na výrub
+  </h1>
+
+
+  <h2 class="govuk-heading-l">Nepotrebujete povolenie ak:</h2>
+<ul  class="govuk-list govuk-list--bullet">
+<li>Ide o obnovu produkčných ovocných drevín, ak sa výsadba nových ovocných drevín uskutoční do 6 mesiacov odo dňa výrubu</li>
+<li>Drevina bezprostredne ohrozuje zdravie alebo život človeka, alebo hrozí značná škoda majetku, okrem prípadov, kedy:
+  <ul>
+    <li>sa drevina nachádza v území so štvrtým alebo piatym stupňom ochrany;
+      </li>
+      <li>Iný predpis usatnovuje inak;
+
+      </li>
+  </ul>
+</li>
+
+<li>je výrub preukázateľne nevyhnutný na zabezpečenie starostlivosti o osobitne chránenú časť prírody a krajiny a ak výrub vykonáva organizácia ochrany prírody,
+  </li>
+  <li>ak rastú v súkromných záhradách a záhradkárskych osadách a majú obvod kmeňa menší ako 80cm vo výške 130cm nad zemou.</li>
+  <li>má strom obvod kmeňa menší ako 40cm vo výške 130cm a zároveň sa nenachádza:
+    <ul>
+      <li>v druhom a vyššom stupni ochrany
+        </li>
+        <li>na cintorínoch 
+          </li>
+          <li>ako súčasť verejnej zelene
+            </li>
+    </ul>
+    </li>
+    <li>Má ker menšiu plochu výmeru ako 10m2
+      </li>
+</ul>
+
+
+
+{{
+  govukButton({
+    text: "Potrebujem povolenie",
+    href: serviceUrl + "/todo-list",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

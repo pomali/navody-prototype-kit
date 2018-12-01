@@ -21,42 +21,27 @@ router.get("/povinne-ohlasenia-zmeny", function(req, res) {
 });
 
 router.get("/dopravny-inspektorat", function(req, res) {
-  res.render(
-    "trvaly-pobyt/dopravny-inspektorat.html",
-    buildRequestData(req)
-  );
+  res.render("trvaly-pobyt/dopravny-inspektorat.html", buildRequestData(req));
 });
 
-
-
 router.get("/obchodny-register", function(req, res) {
-  res.render(
-    "trvaly-pobyt/obchodny-register.html",
-    buildRequestData(req)
-  );
+  res.render("trvaly-pobyt/obchodny-register.html", buildRequestData(req));
 });
 
 router.get("/zivnost", function(req, res) {
-  res.render(
-    "trvaly-pobyt/zivnost.html",
-    buildRequestData(req)
-  );
+  res.render("trvaly-pobyt/zivnost.html", buildRequestData(req));
 });
 
-
-router.get("/ostatne-institucie", function(req, res) {
-  res.render(
-    "trvaly-pobyt/ostatne-institucie",
-    buildRequestData(req)
-  );
+router.get("/ostatne-zmeny", function(req, res) {
+  res.render("trvaly-pobyt/ostatne-zmeny", buildRequestData(req));
 });
-
 
 router.get("/kataster", function(req, res) {
-  res.render(
-    "trvaly-pobyt/ostatne-institucie",
-    buildRequestData(req)
-  );
+  res.render("trvaly-pobyt/kataster", buildRequestData(req));
+});
+
+router.get("/dolezite-zmeny", function(req, res) {
+  res.render("trvaly-pobyt/dolezite-zmeny", buildRequestData(req));
 });
 
 
@@ -78,48 +63,56 @@ function buildRequestData(request) {
       },
       {
         number: "1",
-        title: "Zmena trvalého pobytu",
+        title: "Hlásenie zmeny trvalého pobytu",
         description: "",
         href: urlTo("/zmena-trvaleho-pobytu"),
         isActive: request.path === "/zmena-trvaleho-pobytu"
       },
       {
         number: "2",
-        title: "Výmena občianskeho",
+        title: "Žiadosť o vydanie nového občianskeho preukazu",
         description: "",
         href: urlTo("/vymena-obcianskeho"),
         isActive: request.path === "/vymena-obcianskeho"
       },
       {
         number: "3",
-        title: "Dopravný inšpektorát",
+        title: "Dôležité zmeny",
         description: "Zmena údajov držiteľa vozidla",
-        href: urlTo("/dopravny-inspektorat"),
-        isActive: request.path === "/dopravny-inspektorat"
+        href: urlTo("/dolezite-zmeny"),
+        isActive: request.path === "/dolezite-zmeny"
       },
       {
-        number: "4",
+        number: "",
         title: "Obchodný register",
         description: "Zmena údajov majiteľa",
         href: urlTo("/obchodny-register"),
         isActive: request.path === "/obchodny-register"
       },
       {
-        number: "5",
-        title: "Živnosť",
+        number: "",
+        title: "Živnostenský register",
         description: "Zmena pre živnosť",
         href: urlTo("/zivnost"),
         isActive: request.path === "/zivnost"
       },
       {
-        number: "6",
-        title: "Ostatné inštitúcie",
-        description: "Zmena údajov majiteľa",
-        href: urlTo("/ostatne-institucie"),
-        isActive: request.path === "/ostatne-institucie"
+        number: "",
+        title: "Dopravný inšpektorát",
+        description: "Zmena údajov držiteľa vozidla",
+        href: urlTo("/dopravny-inspektorat"),
+        isActive: request.path === "/dopravny-inspektorat"
+      },
+
+      {
+        number: "4",
+        title: "Ostatné zmeny",
+        description: "Zmena údajov držiteľa vozidla",
+        href: urlTo("/ostatne-zmeny"),
+        isActive: request.path === "/ostatne-zmeny"
       },
       {
-        number: "7",
+        number: "",
         title: "Kataster",
         description: "Zmena údajov vlastníka",
         href: urlTo("/kataster"),

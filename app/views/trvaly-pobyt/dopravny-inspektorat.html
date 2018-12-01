@@ -5,24 +5,16 @@
     Dopravný inšpektorát
   </h1>
 
+  <p>Držiteľ vozidla je povinný osobne oznámiť zmenu svojho trvalého pobytu alebo sídla do 15 dní odo dňa, keď táto skutočnosť nastala, orgánu Policajného zboru podľa miesta svojho nového pobytu alebo sídla.</p>
 
-  <p>
-Ak nie ste vlastnikom motoroveho vozidla prejdite na <a href='{{ serviceUrl+ "/obchodny-register"}}'>ďalší krok</a>
-    </p>
-  
-
-
-  <p>
-    Zmenu trvalého pobytu urobíte cez slovensko.sk ktore vas nasmeruje na portal ministerstva vnutra
-  </p>
 
   <p>
     Potrebujete
     <ul class="govuk-list govuk-list--bullet">
-      <li>Elektronický občiansky <a>(link na ZS Vytvorenie a aktivacia)</a></li>
+      <li>Elektronický občiansky preukaz s novým trvalým pobytom</li>
     </ul>
   </p>
-  
+
   {{ govukButton({
     text: "Ohláste zmenu údajov držiteľa vozidla",
     href: "https://portal.minv.sk/wps/wcm/connect/sk/site/main/zivotne-situacie/vozidla/vozidla-evidencia-ziadosti/vozidla-ziadost-zmena-menu/",
@@ -31,13 +23,6 @@ Ak nie ste vlastnikom motoroveho vozidla prejdite na <a href='{{ serviceUrl+ "/o
   }) }}
 
 
-  <p>
-    Skoncili ste s prihlásením cez slovensko.sk? Vybavte si nový občiansky preukaz.
-  </p>
+  <p>Pre ďalší postup vyberte udalosť vľavo</p>
 
-  {{ govukButton({
-    text: "Ďalší krok",
-    href: serviceUrl + "/obchodny-register",
-    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
-  }) }}
 {% endblock %}

@@ -2,18 +2,13 @@
 
 {% block mainContent %}
   <h1 class="govuk-heading-xl">
-    Výmena občianskeho
+    Žiadosť o vydanie nového občianskeho preukazu
   </h1>
-
-  <p>
-    Poziadajte o zmenu obcianskeho
-  </p>
 
   <p>
     Potrebujete
     <ul class="govuk-list govuk-list--bullet">
-      <li>Elektronický občiansky <a>(link na ZS Vytvorenie a aktivacia)</a></li>
-      <li>Potvrdenie o povoleni</li>
+      <li>Elektronický občiansky preukaz</li>
     </ul>
   </p>
   
@@ -26,15 +21,15 @@
 
 
   <p>
-    Na novy obciansky budete cakat cca 3 tyzdne.
+    Na nový občiansky budete čakať cca. 3 týždne.
   </p>
   <p>
-    Dostali ste novy obciansky? 
+    Dostali ste nový občiansky preukaz? Pozrite si ďalšie zmeny ktoré na Vás čakajú.
   </p>
 
   {{ govukButton({
     text: "Ďalší krok",
-    href: serviceUrl + "/dopravny-inspektorat",
+    href: serviceUrl + "/dolezite-zmeny",
     classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
   }) }}
 {% endblock %}
