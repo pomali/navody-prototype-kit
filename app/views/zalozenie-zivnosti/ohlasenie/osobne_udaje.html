@@ -2,6 +2,7 @@
 
 {% block mainContent %}
 <form action="adresa" method="post" class="form">
+<input type="hidden" name="token" value="{{sessionToken}}" />
 {% call govukFieldset({
   legend: {
     text: "Vaše údaje",

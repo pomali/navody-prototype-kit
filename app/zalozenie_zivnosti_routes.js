@@ -66,6 +66,7 @@ function buildRequestData (request) {
   return {
     'serviceName': 'Založenie živnosti: krok po kroku',
     'serviceUrl': '/zalozenie-zivnosti',
+    'sessionToken': request.query.token,
     'navigationSteps': [
       {
         number: '0',
