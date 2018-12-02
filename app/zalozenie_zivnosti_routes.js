@@ -84,7 +84,6 @@ router.get('/ohlasenie/zdravotna-poistovna', function (req, res) {
 router.post('/ohlasenie/zdravotna-poistovna', [
   check('health-insurance').not().isEmpty()
 ], function (req, res) {
-  console.log('here')
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
     return res.render('zalozenie-zivnosti/ohlasenie/zdravotka.html', buildRequestData(req, errors))
@@ -99,7 +98,6 @@ router.get('/ohlasenie/nazov', function (req, res) {
 router.post('/ohlasenie/nazov', [
   check('business-name').not().isEmpty()
 ], function (req, res) {
-  console.log('here')
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
     return res.render('zalozenie-zivnosti/ohlasenie/nazov.html', buildRequestData(req, errors))
@@ -114,7 +112,6 @@ router.get('/ohlasenie/cinnosti', function (req, res) {
 router.post('/ohlasenie/cinnosti', [
   check('activity').not().isEmpty()
 ], function (req, res) {
-  console.log('here')
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
     return res.render('zalozenie-zivnosti/ohlasenie/cinnost.html', buildRequestData(req, errors))
@@ -131,12 +128,10 @@ router.get('/ohlasenie/podpis', function (req, res) {
 })
 
 function mapErrorrs (errors) {
-  console.log(errors)
   const errorsMap = {}
   for (const error of errors) {
     errorsMap[error.param] = { text: error.msg }
   }
-  console.log(errorsMap)
   return errorsMap
 }
 
