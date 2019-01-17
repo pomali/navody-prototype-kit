@@ -5,7 +5,7 @@ mainContent %}
   Všetky pripravené doklady a tlačivá z bodov 0 . a I. podpíšte kvalifikovaným
   elektronickým podpisom alebo viacnásobným kvalifikovaným elektronickým
   podpisom, napríklad prostredníctvom aplikácie
-  <a href="http://www.podpisuj.sk">Podpisuj.sk</a>.
+  <a href="http://www.podpisuj.sk" target="_blank">Podpisuj.sk</a>.
 </p>
 <p>
   Postupujte podľa
@@ -20,10 +20,12 @@ mainContent %}
   </a>
 </p>
 <p>Podpísané dokumenty uložte vo svojom počítači.</p>
-{{ govukWarningText({
-  "text": "Doklady podpisujú všetci navrhovatelia.",
-  "iconFallbackText": "Warning"
-}) }}
+{{
+  govukWarningText({
+    text: "Doklady podpisujú všetci navrhovatelia.",
+    iconFallbackText: "Warning"
+  })
+}}
 
 {{
   govukButton({
