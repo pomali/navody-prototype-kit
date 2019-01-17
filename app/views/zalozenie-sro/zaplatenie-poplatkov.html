@@ -1,0 +1,27 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% from
+"hint/macro.njk" import govukHint %} {% block mainContent %}
+<h1 class="govuk-heading-l">Zaplaťte poplatky za založenie s.r.o.</h1>
+<p>Zaplaťte poplatky.</p>
+<p>
+  Poplatok je potrebné zaplatiť podľa inštrukcií v doručenej správe – napr.
+  prevodom cez internet banking alebo vkladom na bankový účet prijímateľa. Po
+  pripísaní platby na účet súdu, čo je spravidla tretí pracovný deň po úhrade,
+  Vám bude doručená správa o pridelení sudcu.
+</p>
+{{ govukHint({ "html": '<b>Tip: Náprava zle uhradenej platby.</b> Ak zistíte,
+že ste uhradili platbu s nesprávnymi platobnými symbolmi, kontaktujte príslušný
+registrový súd (učtáreň, kde sa párujú platby) a požiadajte o ručné spárovanie
+platby. Kontakt na všetky súdy je k dispozícii na stránkach ministerstva
+spravodlivosti
+<a href="http://www.justice.gov.sk/Stranky/Sudy/SudZoznam.aspx" target="_blank"
+  >tu</a
+>.' }) }}
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

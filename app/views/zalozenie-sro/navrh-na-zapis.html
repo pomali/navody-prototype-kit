@@ -1,0 +1,32 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% block
+mainContent %}
+
+<h1 class="govuk-heading-l">Vyplňte tlačivo návrhu na zápis s. r. o. do Obchodného registra</h1>
+
+<p>
+  Vyplňte tlačivo
+  <a
+    href="http://www.justice.gov.sk/eSluzby/_layouts/FormServer.aspx?XsnLocation=/FormServerTemplates/FUPS.xsn"
+  >
+    Návrh na zápis spoločnosti s ručením obmedzeným do Obchodného registra </a
+  >.
+</p>
+<p>
+  Podrobný návod na vyplnenie tlačiva je dostupný
+  <a
+    href="http://www.justice.gov.sk/_layouts/download.aspx?SourceUrl=/Dokumenty/Obchodny_register_SR/120315_Pou%c5%be%c3%advate%c4%besk%c3%a1%20pr%c3%adru%c4%8dka%20-%20Elektronick%c3%a9%20formul%c3%a1re.pdf"
+    target="_blank"
+  >
+    na justice.gov.sk </a
+  >.
+</p>
+
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}
