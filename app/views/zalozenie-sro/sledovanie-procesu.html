@@ -1,0 +1,45 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% block
+mainContent %}
+<h1 class="govuk-heading-l">Odsledujte si proces overovania podania</h1>
+<p>
+  Proces automatického overovania podania je ukončený spravidla do 24 hodín. Je
+  potrebné aby ste sledovali doručené správy vo Vašej elektronickej schránke.
+</p>
+<p>
+  V prípade, že
+  <a
+    href="https://www.slovensko.sk/sk/slovnik/detail/_elektronicka-podatelna"
+    target="_blank"
+  >
+    podateľňa
+  </a>
+  nevie automaticky overiť platnosť podpisu, je potrebné čakať na zásah
+  administrátora a čas overenia sa môže predĺžiť. Následne po ukončení overenia
+  Vám bude doručená správa s potvrdenkou o overení podania. Prosím prečítajte si
+  text potvrdenky.
+</p>
+<p>
+  Ak je podpis na niektorom dokumente vyhodnotený ako neplatný, je následne
+  doručená správa o tom, že nenastali účinky doručenia. V takom prípade je
+  potrebné podanie poslať znovu, s korektne podpísanými dokumentmi.
+</p>
+<p>
+  Ak sú všetky podpisy vyhodnotené ako platné, obdržíte správu s informáciu o
+  výške poplatku spolu s platobnými informáciami za spoplatnené služby. Pri
+  elektronickom podaní je sadzba poplatku 50 % z pevnej sumy ustanovenej v
+  <a
+    href="https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1992/71/20180101#prilohy"
+    target="_blank"
+  >
+    Sadzobníku súdnych poplatkov </a
+  >.
+</p>
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

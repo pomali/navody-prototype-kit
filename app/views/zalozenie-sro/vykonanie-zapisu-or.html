@@ -1,0 +1,58 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% from
+"hint/macro.njk" import govukHint %} {% block mainContent %}
+<h1 class="govuk-heading-l">Vykonanie zápisu s.r.o. do Obchodného registra</h1>
+<p>Zápis s.r.o. do Obchodného registra vykonáva súd.</p>
+<p>Zoznam podúloh:</p>
+<ul>
+  <li>
+    <p>
+      Po pripísaní platby na účet súdu, čo je spravidla tretí pracovný deň po
+      úhrade, Vám bude doručená správa o pridelení sudcu.
+    </p>
+  </li>
+</ul>
+<p>
+  Súd vykoná zápis do ochodného registra spravidla do 2 pracovných dní od
+  doručenia návrhu na zápis. Pri elektronickom podaní návrhu účinky doručenia
+  návrhu na zápis nastávajú v deň, keď súdu prišla informácia o zaplatení
+  súdneho poplatku a neuplynulo 15 dní odo dňa podania návrhu na zápis
+  elektronickými prostriedkami.
+</p>
+{{ govukHint({ "html": '
+<b>
+  Tip: V prípade, odmietnutia vykonania zápisu do Obchodného registra, môžete
+  podať námietku. </b
+><br />
+
+V prípade odmietnutia zápisu vám bude doručená emailom správa o odmietnutí
+podania. Po doručení odmietnutia vykonania zápisu môžete nasledujúci podať
+námietky proti odmietnutiu vykonania zápisu, v ktorých je možné doplniť
+skutočnosti, ktoré bránili vykonaniu zápisu (napríklad doplniť chýbajúcu listinu
+a pod.). Lehota na podanie námietok je 15 dní odo dňa doručenia alebo vydania
+oznámenia - viď § 8 zákona 530/2003 Z. z. -
+<a
+  href="https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+  target="_blank"
+>
+  https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/ </a
+>. <br />
+Námietku je možné podať cez
+<a href="https://www.slovensko.sk/sk/slovnik/detail/_upvs" target="_blank"
+  >ÚPVS</a
+>
+prostredníctvom služby<
+<a
+  href="https://www.slovensko.sk/sk/e-sluzby/or-namietka-zapis"
+  target="_blank"
+>
+  Námietka proti odmietnutiu vykonania zápisu do obchodného registra </a
+>.<br />' }) }}
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

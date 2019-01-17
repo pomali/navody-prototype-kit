@@ -1,0 +1,35 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% block
+mainContent %}
+<h1 class="govuk-heading-l">Podpíšte pripravené tlačivá</h1>
+<p>
+  Všetky pripravené doklady a tlačivá z bodov 0 . a I. podpíšte kvalifikovaným
+  elektronickým podpisom alebo viacnásobným kvalifikovaným elektronickým
+  podpisom, napríklad prostredníctvom aplikácie
+  <a href="http://www.podpisuj.sk">Podpisuj.sk</a>.
+</p>
+<p>
+  Postupujte podľa
+  <a href="http://podpisuj.sk/components.html" target="_blank">návodu</a>. Ďalší
+  postup na podpisovanie dokumentov prostredníctvom oficiálnych štátnych
+  aplikácií je popísaný
+  <a
+    href="https://www.slovensko.sk/sk/e-sluzby/or-zapis-zmena-vymaz"
+    target="_blank"
+  >
+    na portáli slovensko.sk
+  </a>
+</p>
+<p>Podpísané dokumenty uložte vo svojom počítači.</p>
+{{ govukWarningText({
+  "text": "Doklady podpisujú všetci navrhovatelia.",
+  "iconFallbackText": "Warning"
+}) }}
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

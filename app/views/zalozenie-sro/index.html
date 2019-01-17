@@ -1,0 +1,158 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} 
+{% from "hint/macro.njk" import govukHint %}
+
+{% block mainContent %}
+<h1 class="govuk-heading-l">
+  {{serviceName}}
+</h1>
+<!-- protip using https://word2cleanhtml.com/ helps when pasting text from word-->
+
+<p>
+  Pri založení spoločnosť s ručením obmedzeným (s. r. o.) online ušetríte 50%
+  nákladov za poplatky spojené s podaním návrhu, ktoré v súčasnosti v prípade
+  prvozápisu činia 300 EUR.
+</p>
+<p>Predtým než začnete, budete potrebovať:</p>
+<ul>
+  <li>
+    <p><a href="/aktivacia-eid">občiansky preukaz s čipom (eID)</a>,</p>
+  </li>
+  <li>
+    <p>
+      nahratý certifikát a funkčné prihlásenie do ústredného portálu verejnej
+      správy slovensko.sk.
+    </p>
+  </li>
+  <li>
+    {{ govukDetails({
+      "summaryText": "Zakladateľská listina",
+      "html": 'Prikladá sa v prípade jediného zakladateľa s. r. o., podpis má byť úradne
+      osvedčený. <a href="https://www.justice.gov.sk/Dokumenty/FORMULARE_VZORY/vzor_zakladatelska%20listina.pdf" target="_blank">Vzor
+      z justice.gov.sk</a>.'
+    }) }}
+</li>
+  <li>
+    {{ govukDetails({
+      "summaryText": "Vyhlásenie jediného spoločníka",
+      "html": "Ak novú s. r. o. zakladá jediný zakladateľ, tak týmto vyhlásením potvrdzuje,
+      že nie je jediným spoločníkom vo viac ako dvoch s. r. o."
+    }) }}</li>
+
+  <li>
+    {{ govukDetails({
+      "summaryText": "Vyhlásenie zakladateľa",
+      "html": "Ak je jediným zakladateľom novej s. r. o. iná s. r. o., týmto vyhlásením
+      potvrdzuje, že má viac spoločníkov"
+    }) }}</li>
+
+  <li>
+    {{ govukDetails({
+      "summaryText": "Spoločenská zmluva",
+      "html": "Dokladá sa v prípade, že novú s. r. o. zakladajú viacerí zakladatelia, podpisy
+      na Spoločenskej zmluve musia byť úradne osvedčené"
+    }) }}</li>
+
+    <li>{{ govukDetails({
+      "summaryText": "Overená kópia živnostenského oprávnenia",
+      "html": '<p>Oprávňuje podnikateľa k podnikateľskej činnosti. Vystavuje sa na Jednotnom
+      kontaktom mieste (JKM) alebo tzv.
+      <a href="http://www.minv.sk/?zivnostenske-urady-sr" target="_blank"> Živnostenskom úrade. </a></p>
+      <p>Ohlásenie živností môžete zrealizovať elektronicky cez
+        <a href="https://www.slovensko.sk/sk/e-sluzby/jkm-zivnostensky-register" target="_blank">
+          slovensko.sk</a>.</p>
+      <p>
+        Lehota na vydanie osvedčenia o živnostenskom oprávnení sú 3 pracovné dni odo
+        dňa doručenia všetkých potrebných dokumentov vyžadovaných na
+        <a href="http://www.minv.sk/?zivnostenske-podnikanie" target="_blank">
+          registráciu živnostenského podnikania
+        </a>.
+      </p>
+      <p>
+        Pri vybavovaní živnostenského oprávnenia cez JKM uveďte aj údaje na
+        registráciu k dani z príjmov, ušetríte tak 1 krok popísaný v závere návodu.
+      </p>'
+    }) }}</li>
+
+  <li>
+    {{ govukDetails({
+      "summaryText": "Stanovy",
+      "html": "Prikladajú sa, ak boli prijaté."
+    }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "Súhlas správcu dane so zápisom s. r. o. do OR",
+    "html": "Miestne príslušný správca dane súhlasom potvrdí, že voči žiadateľovi neeviduje
+    pohľadávku, a že žiadateľ nemá daňové nedoplatky prevyšujúce 170 eur"
+  }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "Vyhlásenie správcu vkladu o splatení vkladov",
+    "html": "O tom, že základné imanie 5000 EUR bolo splatené v hotovosti k rukám správcu
+    vkladu. Správcom vkladu je jeden zo zakladateľov spoločnosti, ktorý je uvedený
+    v spoločenskej zmluve/Zakladateľskej listine. Pred podaním návrhu na zápis
+    spoločnosti do OR musí sa na každý peňažný vklad splatiť najmenej 30%. Celková
+    hodnota splatených peňažných vkladov spolu s hodnotou odovzdaných nepeňažných
+    vkladov musí však byť aspoň 50 % 5000 EUR. Ak spoločnosť založil jeden
+    zakladateľ, môže sa zapísať do obchodného registra, len keď je v plnej výške
+    splatené celé základné imanie."
+  }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "Znalecký posudok",
+    "html": "Prikladá sa , ak sa do spoločnosti vložil nepeňažný vklad. Preukazuje, že
+    hodnota nepeňažného vkladu zodpovedá hodnote prevzatého záväzku na vklad do
+    majetku spoločnosti."
+  }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "Podpisový vzor konateľa alebo konateľov",
+    "html": "Dokument musí byť úradne osvedčený."
+  }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "Nájomná zmluva alebo súhlas vlastníka nehnuteľnosti",
+    "html": "Potrebné pre zápis nehnuteľnosti ako sídla s. r. o. do Obchodného registra."
+  }) }}
+</li>
+
+<li>
+  {{ govukDetails({
+    "summaryText": "List vlastníctva",
+    "html": "K nehnuteľnosti, v ktorej bude mať s. r. o. sídlo."
+  }) }}
+</li>
+{{ govukHint({
+  "html": "
+  <b>Tip: Nascanujte a uložte si doklady.</b><br/>
+    Všetky doklady naskenujte do formátu PDF (preferovaný formát) alebo TIFF a
+    uložte do svojho počítača, neskôr ich budete potrebovať. Prílohy skenujte v
+    odtieňoch sivej s rozlíšením najviac 200 dpi. Skontrolujte skenovaný dokument,
+    či je obsah čitateľný. V názvoch elektronických dokumentov nepoužívajte
+    diakritiku.
+    <br/>
+    Návrh na zápis spoločnosti do obchodného registra podávajú a podpisujú všetci
+    konatelia spoločnosti. Budete zároveň potrebovať všetky údaje o osobách, ktoré
+    idete do Registra zapísať, preto si ich údaje z občianskeho preukazu (eID)
+    vopred pripravte."
+}) }}
+
+</ul>
+
+{{
+  govukButton({
+    text: "Začať",
+    href: "navrh-na-zapis",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}

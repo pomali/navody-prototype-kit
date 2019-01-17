@@ -1,0 +1,106 @@
+{% extends "zalozenie-zivnosti/layout_step_by_step_nav.html" %} {% from
+"hint/macro.njk" import govukHint %} {% block mainContent %}
+
+<h1 class="govuk-heading-l">Podajte tlačivá elektronicky</h1>
+<p>Zoznam podúloh:</p>
+<ul>
+  <li>
+    <p>
+      Zistite si príslušný súd SR pre podanie vášho návrhu prostredníctvom
+      <a
+        href="https://www.justice.gov.sk/Stranky/Sudy/Sudy/SudPrislusnost.aspx"
+        _blank
+      >
+        portálu Ministerstva spravodlivosti SR.
+      </a>
+    </p>
+  </li>
+  <li>
+    <p>
+      Podanie vykonajte cez
+      <a href="https://www.slovensko.sk/sk/detail-sluzby?externalCode=OR_48033">
+        elektronickú podateľňu www.slovensko.sk</a
+      >. Vyberte príslušný súd SR.
+    </p>
+  </li>
+  <li>
+    <p>
+      Prihláste sa cez slovensko.sk. V súčasnosti je možné prihlášiť ako so
+      slovenskám občianským preukazom alebo ako obyvateľ inej krajiny EÚ.
+    </p>
+  </li>
+  <li><p>Vyplňte formulár na zakladanie s.r.o.:</p></li>
+</ul>
+<ul>
+  <li><p>Typ podania – vyberte možnosť „Prvozápis“</p></li>
+</ul>
+<ul>
+  <li>
+    <p>
+      Právnu formu spoločnosti, ktorú žiadate zapísať – vyberte možnosť
+      „Spoločnosť s ručením obmedzeným“
+    </p>
+  </li>
+  <li>
+    <p>
+      Registrový súd podľa príslušnosti – vyberte príslušný súd SR pre podanie
+      vášho návrhu
+    </p>
+  </li>
+  <li><p>Obchodné meno spoločnosti – zadajte názov zakladanej s. r. o.</p></li>
+</ul>
+<p><img alt="" src="images/image1.png" width="356" height="321" /></p>
+
+{{ govukHint({ "html": "
+<b
+  >Tip: Pri prvozápise Vám bude Spisová značka pridelená súdom, nevypĺňajte
+  ju.</b
+><br />
+Po vyplnení formulára kliknite na „Nahraj dokumenty“, vyberte elektronickú formu
+pre „Výber podoby dokumentu“ a priložte z vášho počítača všetky podpísané
+dokumenty z bodu II. Dokumenty označené ako „Povinné“ musia mať vložený súbor. "
+}) }}
+
+<ul>
+  <li>
+    <p>Skontrolujte si celé podanie prostredníctvom voľby „Prehľad podania“.</p>
+  </li>
+  <li><p>Odošlite formulár prostredníctvom voľby „Odoslať“.</p></li>
+  <li>
+    <p>
+      Skontrolujte, či Vám do elektronickej schránky a na emailovú adresu prišla
+      správa s potvrdenkou o prijatí podania a začatí procesu overovania.
+    </p>
+  </li>
+</ul>
+
+{{ govukHint({ "html": '<b>Tip: Skontrolujte si text potvrdenky:</b> Prosím
+prečítajte si text potvrdenky. V prípade ak je niektorý dokument v nekorektnom
+formáte,
+<a
+  href="https://www.slovensko.sk/sk/slovnik/detail/_elektronicka-podatelna"
+  target="_blank"
+>
+  elektronická podateľňa
+</a>
+nepokračuje v spracovaní podania. Potvrdenka o prijatí a overení Vášho podania
+je autorizovaná
+<a
+  href="http://www.justice.gov.sk/Stranky/Sudy/Certifikaty-na-podpisovanie-vystupov-z-OR.aspx"
+  target="_blank"
+>
+  kvalifikovanou elektronickou pečaťou určenou na podpisovanie výstupov z
+  elektronických služieb obchodného registra.
+</a>
+Formát potvrdenky je ZEP. Potvrdenku je možné prečítať pomocou aktuálnej
+aplikácie
+<a href="http://www.qsign.sk/na-stiahnutie" target="_blank">QSign</a>.' }) }}
+
+{{
+  govukButton({
+    text: "Ďalej",
+    href: nextUrl,
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  })
+}}
+{% endblock %}
