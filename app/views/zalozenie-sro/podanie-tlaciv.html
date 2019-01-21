@@ -77,27 +77,34 @@ dokumenty z bodu II. Dokumenty označené ako „Povinné“ musia mať vložen�
   </li>
 </ul>
 
-{{ govukHint({ "html": '<b>Tip: Skontrolujte si text potvrdenky:</b> Prosím
-prečítajte si text potvrdenky. V prípade ak je niektorý dokument v nekorektnom
-formáte,
-<a
-  href="https://www.slovensko.sk/sk/slovnik/detail/_elektronicka-podatelna"
-  target="_blank"
->
-  elektronická podateľňa
-</a>
-nepokračuje v spracovaní podania. Potvrdenka o prijatí a overení Vášho podania
-je autorizovaná
-<a
-  href="http://www.justice.gov.sk/Stranky/Sudy/Certifikaty-na-podpisovanie-vystupov-z-OR.aspx"
-  target="_blank"
->
-  kvalifikovanou elektronickou pečaťou určenou na podpisovanie výstupov z
-  elektronických služieb obchodného registra.
-</a>
-Formát potvrdenky je ZEP. Potvrdenku je možné prečítať pomocou aktuálnej
-aplikácie
-<a href="http://www.qsign.sk/na-stiahnutie" target="_blank">QSign</a>.' }) }}
+
+{{ govukDetails({
+  "summaryText": "Tip: Skontrolujte si text potvrdenky:",
+  "html": 'Prosím
+  prečítajte si text potvrdenky.
+  <br/> V prípade ak je niektorý dokument v nekorektnom
+  formáte,
+  <a
+    href="https://www.slovensko.sk/sk/slovnik/detail/_elektronicka-podatelna"
+    target="_blank"
+  >
+    elektronická podateľňa
+  </a>
+  nepokračuje v spracovaní podania. 
+  <br/>Potvrdenka o prijatí a overení Vášho podania
+  je autorizovaná
+  <a
+    href="http://www.justice.gov.sk/Stranky/Sudy/Certifikaty-na-podpisovanie-vystupov-z-OR.aspx"
+    target="_blank"
+  >
+    kvalifikovanou elektronickou pečaťou určenou na podpisovanie výstupov z
+    elektronických služieb obchodného registra.
+  </a>
+  <br/>
+  Formát potvrdenky je ZEP. Potvrdenku je možné prečítať pomocou aktuálnej
+  aplikácie
+  <a href="http://www.qsign.sk/na-stiahnutie" target="_blank">QSign</a>.'
+}) }}
 
 {{
   govukButton({

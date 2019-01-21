@@ -8,14 +8,18 @@
   pripísaní platby na účet súdu, čo je spravidla tretí pracovný deň po úhrade,
   Vám bude doručená správa o pridelení sudcu.
 </p>
-{{ govukHint({ "html": '<b>Tip: Náprava zle uhradenej platby.</b> Ak zistíte,
-že ste uhradili platbu s nesprávnymi platobnými symbolmi, kontaktujte príslušný
-registrový súd (učtáreň, kde sa párujú platby) a požiadajte o ručné spárovanie
-platby. Kontakt na všetky súdy je k dispozícii na stránkach ministerstva
-spravodlivosti
-<a href="http://www.justice.gov.sk/Stranky/Sudy/SudZoznam.aspx" target="_blank"
-  >tu</a
->.' }) }}
+
+{{ govukDetails({
+ "summaryText": "Tip: Náprava zle uhradenej platby.",
+ "html": 'Ak zistíte,
+ že ste uhradili platbu s nesprávnymi platobnými symbolmi, kontaktujte príslušný
+ registrový súd (učtáreň, kde sa párujú platby) a požiadajte o ručné spárovanie
+ platby. Kontakt na všetky súdy je k dispozícii na stránkach ministerstva
+ spravodlivosti
+ <a href="http://www.justice.gov.sk/Stranky/Sudy/SudZoznam.aspx" target="_blank"
+   >tu</a
+ >.'
+}) }}
 
 {{
   govukButton({

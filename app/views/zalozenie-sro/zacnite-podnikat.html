@@ -2,19 +2,19 @@
 "hint/macro.njk" import govukHint %} {% block mainContent %}
 <h1 class="govuk-heading-l">Začnite podnikať</h1>
 <p>Podnikať môžete začať dňom zápisu do Obchodného registra.</p>
-{{ govukHint({ "html": '
-<b>Tip: Nezabudnite sa registrovať do Zdravotnej a Sociálnej poisťovni</b>
-<br />
-Ak má vaša s. r. o. aspoň 1 zamestnanca, do 8 dní od začiatku podnikania sa
-zaregistrujte do zdravotnej a Sociálnej poisťovne. Do dní 30 dní odo dňa
-získania povolenia alebo oprávnenia na podnikanie máte povinnosť zaregistrovať
-sa u miestne príslušného správcu dane. Viac informácií k Oznamovacím
-povinnostiam je uvedených v životnej situácii
+
+{{ govukDetails({ "summaryText": "Tip: Nezabudnite sa registrovať do Zdravotnej
+a Sociálnej poisťovni", "html": 'Ak má vaša s. r. o. aspoň 1 zamestnanca, do 8
+dní od začiatku podnikania sa zaregistrujte do zdravotnej a Sociálnej poisťovne.
+Do dní 30 dní odo dňa získania povolenia alebo oprávnenia na podnikanie máte
+povinnosť zaregistrovať sa u miestne príslušného správcu dane. Viac informácií k
+Oznamovacím povinnostiam je uvedených v životnej situácii
 <a
   href="https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_oznamovacie-povinnosti-po-registracii/"
   target="_blank"
 >
   Oznamovacie povinnosti po registrácii podnikania </a
->.'}) }} 
+>.' }) }}
+
 <!-- TODO: pridaj feedback bar ?-->
 {% endblock %}
